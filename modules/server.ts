@@ -10,7 +10,7 @@ const sb = () => {
 }
 
 
-export async function getCountries(request: ZuploRequest, context: ZuploContext) {
+export async function getAllThemes(request: ZuploRequest, context: ZuploContext) {
 
   const supabase = sb();
 
@@ -26,22 +26,22 @@ export async function getCountries(request: ZuploRequest, context: ZuploContext)
 
 }
 
-export async function setCountries(request: ZuploRequest, context: ZuploContext) {
+// export async function setCountries(request: ZuploRequest, context: ZuploContext) {
 
-  const supabase = sb();
-  const payload = await request.json();
+//   const supabase = sb();
+//   const payload = await request.json();
 
-  const { data, error } = await supabase
-    .from('countries')
-    .insert(payload)
-    .select()
+//   const { data, error } = await supabase
+//     .from('countries')
+//     .insert(payload)
+//     .select()
 
 
-  if (error) {
-    context.log.error(error)
-    throw new Error("error")
-  }
+//   if (error) {
+//     context.log.error(error)
+//     throw new Error("error")
+//   }
 
-  return new Response("Saved Successfully", { status: 201 })
+//   return new Response("Saved Successfully", { status: 201 })
 
-}
+// }

@@ -8,6 +8,8 @@
     "test": "zup test"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.38.5",
+    "@zuplo/runtime": "^5.1516.0",
     "zuplo": "latest"
   }
 }

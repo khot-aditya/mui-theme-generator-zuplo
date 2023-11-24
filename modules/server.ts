@@ -4,7 +4,7 @@ import { createClient } from "@supabase/supabase-js"
 
 const sb = () => {
   const supabaseUrl = 'https://vvwurcluclmfbskwmkqy.supabase.co';
-  const supabaseAnonKey = environment.SUPABASE_SERVICE_KEY
+  const supabaseAnonKey = environment.SUPABASE_SERVICE_KEY!
   const supabase = createClient(supabaseUrl, supabaseAnonKey);
   return supabase;
 }
@@ -19,7 +19,7 @@ export async function getAllThemes(request: ZuploRequest, context: ZuploContext)
     .select('*')
 
   if (error) {
-    throw new Error("error")
+    throw new Error("something went wrong")
   }
 
   return countries

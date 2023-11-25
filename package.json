@@ -1,8 +1,6 @@
 {
   "name": "mui-theme-generator",
   "version": "1.0.0",
-  "author": "",
-  "copyright": "",
   "scripts": {
     "dev": "zup dev",
     "test": "zup test"
@@ -10,6 +8,8 @@
   "dependencies": {
     "@supabase/supabase-js": "^2.38.5",
     "@zuplo/runtime": "^5.1516.0",
+    "@zuplo/test": "^1.4.0",
+    "chai": "^4.3.10",
     "zuplo": "latest"
   }
 }

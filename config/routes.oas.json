@@ -11,7 +11,7 @@
       },
       "get": {
         "summary": "List All Themes",
-        "description": "Lorem ipsum dolor sit amet, **consectetur adipiscing** elit, sed do `eiusmod tempor` incididunt ut labore et dolore magna aliqua.",
+        "description": "List All Themes from supabase database",
         "x-zuplo-route": {
           "corsPolicy": "none",
           "handler": {
@@ -20,7 +20,9 @@
             "options": {}
           },
           "policies": {
-            "inbound": []
+            "inbound": [
+              "rate-limit-inbound-5"
+            ]
           }
         },
         "operationId": "49baf967-e753-45c8-b36f-4635ba3729fd"

@@ -1,3 +1,17 @@
 {
-  "policies": []
+  "policies": [
+    {
+      "handler": {
+        "export": "RateLimitInboundPolicy",
+        "module": "$import(@zuplo/runtime)",
+        "options": {
+          "rateLimitBy": "ip",
+          "requestsAllowed": 5,
+          "timeWindowMinutes": 1
+        }
+      },
+      "name": "rate-limit-inbound-5",
+      "policyType": "rate-limit-inbound"
+    }
+  ]
 }

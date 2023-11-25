@@ -15,7 +15,7 @@ export async function getAllThemes(request: ZuploRequest, context: ZuploContext)
 
   const { data: countries, error } = await supabase
     .from('themes')
-    .select('*')
+    .select('name')
 
   if (error) {
     throw new Error(JSON.stringify(error))

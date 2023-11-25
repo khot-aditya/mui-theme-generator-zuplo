@@ -1,0 +1,8 @@
+{
+  "description": "A simple POST to the initial route",
+  "pathname": "/v1/list-all-themes",
+  "method": "GET",
+  "headers": {
+    "content-type": "application/json"
+  }
+}

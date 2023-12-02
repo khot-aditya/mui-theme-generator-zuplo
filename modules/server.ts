@@ -13,15 +13,23 @@ export async function getAllThemes(request: ZuploRequest, context: ZuploContext)
 
   const supabase = sb();
 
-  const { data: countries, error } = await supabase
+  const { data: themes, error: themesError, count: totalRecords, status } = await supabase
     .from('themes')
-    .select('name')
+    .select('name', { count: 'planned', head: false })
 
-  if (error) {
-    throw new Error(JSON.stringify(error))
+  if (themesError) {
+    return {
+      status,
+      message: themesError.message
+    }
   }
 
-  return countries
+  return {
+    status,
+    message: "Success",
+    data: themes,
+    totalRecords
+  }
 
 }
 

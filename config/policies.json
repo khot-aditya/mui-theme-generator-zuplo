@@ -13,5 +13,18 @@
       "name": "rate-limit-inbound-5",
       "policyType": "rate-limit-inbound"
     }
+  ],
+  "corsPolicies": [
+    {
+      "name": "custom-cors",
+      "allowedOrigins": "http://localhost:5173, https://khot-aditya.github.io",
+      "allowedHeaders": "origin",
+      "allowedMethods": [
+        "GET",
+        "POST"
+      ],
+      "maxAge": 600,
+      "allowCredentials": true
+    }
   ]
 }

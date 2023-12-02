@@ -13,7 +13,7 @@
         "summary": "List All Themes",
         "description": "List All Themes from supabase database",
         "x-zuplo-route": {
-          "corsPolicy": "none",
+          "corsPolicy": "custom-cors",
           "handler": {
             "export": "getAllThemes",
             "module": "$import(./modules/server)",
